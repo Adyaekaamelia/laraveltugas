@@ -26,6 +26,13 @@ Route::get('about', function () {
      return view('layouts.contact');
  })->name('contact');
 
+//  admin routw
+Route::prefix('admin')->group (function(){
+    Route::get('/', function(){
+        return view('admin.index');
+    });
+});
+
 
 
 
